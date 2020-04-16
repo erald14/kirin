@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 // import {} from 'react-router-dom'
 import { AppContext } from "../../context/AppContext";
+import LanguangeSwitch from "../../features/internalisation/components/LanguangeSwitch";
 
 class Header2 extends Component {
   static contextType = AppContext;
@@ -21,7 +22,7 @@ class Header2 extends Component {
     // Sidenav li open close
     var navUl = [].slice.call(document.querySelectorAll(".navbar-nav > li"));
     for (var y = 0; y < navUl.length; y++) {
-      navUl[y].addEventListener("click", function() {
+      navUl[y].addEventListener("click", function () {
         checkLi(this);
       });
     }
@@ -222,6 +223,7 @@ class Header2 extends Component {
                       {routes.contact.display}
                     </Link>
                   </li>
+                  <LanguangeSwitch />
                 </ul>
               </div>
             </div>
