@@ -18,6 +18,25 @@ export default () => {
           your_message: "Mesazhi juaj"
         }
       }
+    },
+    en: {
+      global: {
+        submit: 'Submit',
+      },
+      pages: {
+        contact: {
+          quick_contact_title: 'Contact and access',
+          quick_contact_subtitle:
+            'If you have any questions just use the following contact details.',
+          address: 'Address',
+          email: 'Email',
+          phone: 'Tel',
+          send_message: 'Send a message',
+          your_name: 'Your name',
+          your_email: 'Your email',
+          your_message: 'Your message',
+        }
+      }
     }
   };
 };
