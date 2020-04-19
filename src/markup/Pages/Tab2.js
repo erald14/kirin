@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TabContent, TabPane,Nav, NavItem, NavLink} from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import classnames from 'classnames';
 
 const Tab2 = (props) => {
@@ -16,15 +16,15 @@ const Tab2 = (props) => {
                     <Nav pills>
                         <NavItem>
                             <NavLink className={classnames({ active: activeTab === '1' })}
-                            onClick={() => { toggle('1'); }}>Hotels</NavLink>
+                                onClick={() => { toggle('1'); }}>Hotels</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink className={classnames({ active: activeTab === '2' })}
-                            onClick={() => { toggle('2'); }}>Packages</NavLink>
+                                onClick={() => { toggle('2'); }}>Packages</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink className={classnames({ active: activeTab === '3' })}
-                            onClick={() => { toggle('3'); }}>Places</NavLink>
+                                onClick={() => { toggle('3'); }}>Places</NavLink>
                         </NavItem>
                     </Nav>
                 </div>
@@ -75,7 +75,7 @@ const Tab2 = (props) => {
                                     <input type="text" className="form-control" id='datetimepicker1' placeholder="Date" />
                                 </div>
                                 <div className="form-group col-lg-2 col-md-4 col-sm-6 col-6">
-                                    <button type="button" onclick="location.href='place.html'" className="site-button btn-block">SEARCH</button>
+                                    <button type="button" onClick="location.href='place.html'" className="site-button btn-block">SEARCH</button>
                                 </div>
                             </form>
                         </TabPane>
@@ -121,7 +121,7 @@ const Tab2 = (props) => {
                                     <input type="text" className="form-control" id='datetimepicker2' placeholder="Date" />
                                 </div>
                                 <div className="form-group col-lg-2 col-md-4 col-sm-6 col-6">
-                                    <button type="button" onclick="location.href='place.html'" className="site-button btn-block">SEARCH</button>
+                                    <button type="button" onClick="location.href='place.html'" className="site-button btn-block">SEARCH</button>
                                 </div>
                             </form>
                         </TabPane>
@@ -167,7 +167,7 @@ const Tab2 = (props) => {
                                     <input type="text" className="form-control" id='datetimepicker3' placeholder="Date" />
                                 </div>
                                 <div className="form-group col-lg-2 col-md-4 col-sm-6 col-6">
-                                    <button type="button" onclick="location.href='place.html'" className="site-button btn-block">SEARCH</button>
+                                    <button type="button" onClick="location.href='place.html'" className="site-button btn-block">SEARCH</button>
                                 </div>
                             </form>
                         </TabPane>
