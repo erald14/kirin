@@ -7,6 +7,7 @@ import LanguangeSwitch from "../../features/internalisation/components/Languange
 
 class Header2 extends Component {
   static contextType = AppContext;
+
   componentDidMount() {
     // sidebar open/close
 
@@ -69,6 +70,14 @@ class Header2 extends Component {
                 <span></span>
               </button>
 
+
+
+              <div className="extra-nav desktop-lang-switch">
+                <div className="extra-cell">
+                  <LanguangeSwitch />
+                </div>
+              </div>
+
               <div className="extra-nav">
                 <div className="extra-cell">
                   {/* <button id="quik-search-btn" type="button" className="site-button outline black"><i className="fa fa-search"></i></button> */}
@@ -77,6 +86,7 @@ class Header2 extends Component {
                   </Link>
                 </div>
               </div>
+
 
               <div className="dlab-quik-search bg-primary search-style-1">
                 <form action="#">
@@ -223,7 +233,11 @@ class Header2 extends Component {
                       {routes.contact.display}
                     </Link>
                   </li>
-                  <LanguangeSwitch />
+                  {/*Mobile language selector*/}
+                  <li className="mobile-lang-switch">
+                    <LanguangeSwitch />
+                  </li>
+
                 </ul>
               </div>
             </div>

@@ -1,21 +1,27 @@
-import React from "react";
+import React, { Component } from "react";
 
 // import { Auth } from "aws-amplify";
 const AppContext = React.createContext();
 
-class AppProvider extends React.Component {
-  constructor() {
-    super();
-    // this.login = this.login.bind(this);
-    // this.logout = this.logout.bind(this);
-  }
+
+class AppProvider extends Component {
+  state = {
+    language: "al",
+    setLanguage: this.setLanguage
+  };
+
+  setLanguage = language => {
+    this.setState({ language });
+  };
 
   render() {
     return (
       <AppContext.Provider
         value={{
           config: this.props.config,
-          data: this.props.data.al
+          data: this.props.data[this.state.language],
+          language: this.state.language,
+          setLanguage: this.setLanguage
         }}
       >
         <>{this.props.children}</>
@@ -23,6 +29,7 @@ class AppProvider extends React.Component {
     );
   }
 }
-const AppConusumer = AppContext.Consumer;
 
-export { AppProvider, AppConusumer, AppContext };
+const AppConsumer = AppContext.Consumer;
+
+export { AppProvider, AppConsumer, AppContext };

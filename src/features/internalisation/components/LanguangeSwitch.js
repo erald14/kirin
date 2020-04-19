@@ -1,26 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
 
-const LanguangeSwitch = () => {
-    return (
-        <li>
-            <Link to={""}>
-                Language <i className="fa fa-chevron-down"></i>
-            </Link>
-            <ul className="sub-menu">
-                <li>
-                    <Link to={""} className="dez-page">
-                        Albanian
-                        </Link>
-                </li>
-                <li>
-                    <Link to={""} className="dez-page">
-                        English
-                        </Link>
-                </li>
-            </ul>
-        </li>
-    )
+import { AppContext } from "../../../context/AppContext";
+import { languageOptions } from "../../../data";
+
+class LanguageSwitch extends Component {
+    render() {
+        return (
+            <AppContext.Consumer>
+                {({ language, setLanguage }) => (
+                    <>
+                        <select onChange={(e) => setLanguage(e.target.value)}>
+                            {languageOptions.map(el => <option key={el.id} value={el.id}>{el.text}</option>)}
+                        </select>
+                    </>
+                )}
+            </AppContext.Consumer>
+        );
+    }
 }
 
-export default LanguangeSwitch;
+export default LanguageSwitch;
